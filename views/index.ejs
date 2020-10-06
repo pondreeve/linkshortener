@@ -6,6 +6,7 @@
   <title>Link shortener</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="../public/js/post.js" charset="utf-8"></script>
   <!-- <link rel="stylesheet" href="/css/styles.css"> -->
 
   <body>
@@ -15,11 +16,14 @@
         <div class="col-sm-4">
         </div>
         <div class="col-sm-4">
-          <form action="/api/shorturl/new" method="post">
+          <form onsubmit="handleSubmit(event)" method="post">
             <h5>Enter link to shorten:</h5>
             <input type="text" name="url"></input>
             <button type="submit">Create Link</button>
           </form>
+          <p id="shortUrl"></p><br>
+          <p id="testUrl"></p>
+          <p id="comment"></p>
         </div>
         <div class="col-sm-4">
         </div>
