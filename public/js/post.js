@@ -18,7 +18,7 @@ function handleSubmit(e) {
           document.querySelector("#shortUrl").innerHTML = "Error: " + json.error;
         } else {
           document.querySelector('#shortUrl').innerHTML = "https://www.lukapondreeve.com/portfolio/linkshortener/api/shorturl/"+json.short_url;
-          document.querySelector('#testUrl').innerHTML = '<a href="https://www.lukapondreeve.com/portfolio/linkshortener/api/shorturl/'+json.short_url+'">Test me!</a>';
+          document.querySelector('#testUrl').innerHTML = '<a href="https://www.lukapondreeve.com/portfolio/linkshortener/api/shorturl/'+json.short_url+'" target="_blank">Test me!</a>';
           document.querySelector('#comment').innerHTML = "Wooow! Didn't you say the link will be shorter? There is no cake!";
         }
       })
