@@ -1,9 +1,9 @@
 //jshint esversion:6
-require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+require('dotenv').config();
 const rootRoutes = require(__dirname+"/routes/root.js");
 const newRoute = require(__dirname+"/routes/new.js");
 const shortRoute = require(__dirname+"/routes/short.js");
