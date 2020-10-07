@@ -12,7 +12,8 @@ const port = 5002;
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + "/views");
-app.use(bodyParser.urlencoded({extended: true}));
+//app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use("/",rootRoutes);
 app.use("/api/shorturl/new",newRoute);

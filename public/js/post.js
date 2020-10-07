@@ -1,19 +1,22 @@
 function handleSubmit(e) {
   e.preventDefault();
-  let url = document.querySelector('#urlInput').innerHTML;
+  let originalUrl = document.querySelector('#urlInput').value;
+  console.log("urlInput: "+originalUrl);
+
   let data = {
-    url: url
+    url: originalUrl
   };
+  console.log(JSON.stringify(data));
   fetch('/portfolio/linkshortener/api/shorturl/new', {
+      method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      method: 'post',
       body: JSON.stringify(data)
     })
     .then(response => response.json())
-    .then(json=> {
+    .then(json => {
         if (json.error != undefined){
           document.querySelector("#shortUrl").innerHTML = "Error: " + json.error;
         } else {
